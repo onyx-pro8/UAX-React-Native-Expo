@@ -5,12 +5,6 @@ import { Header } from '../../../components/layout/header';
 import { UserInfo } from '../../../components/layout/userInfo';
 import { Image, ScrollView, Text, View } from 'react-native';
 
-// images
-import first from '../../../assets/bandwidth/1.png';
-import second from '../../../assets/bandwidth/2.png';
-import third from '../../../assets/bandwidth/3.png';
-import force from '../../../assets/bandwidth/4.png';
-
 import excla from '../../../assets/excla.png';
 
 import { GlobalStyles } from '../../../components/styles';
@@ -21,33 +15,7 @@ import { MainBtn } from '../../../components/layout/mainBtn';
 import { NoData } from '../../../components/common/noData';
 import { Nav } from '../../../components/layout/nav';
 
-
-const datas = [
-    {
-        label: 'Balance',
-        icon: first,
-        content: '100.00 UAXN',
-        color: 'white'
-    },
-    {
-        label: 'Staked/Validators',
-        icon: second,
-        content: '0/0',
-        color: '#F4970D'
-    },
-    {
-        label: 'Generated Bandwidth',
-        icon: third,
-        content: '0.00',
-        color: '#0DF469'
-    },
-    {
-        label: 'Stake Rewards',
-        icon: force,
-        content: '0.00 UAXN',
-        color: '#DF16FF'
-    },
-];
+import { datas } from '../../../components/datas';
 
 const lists = [
     'Validator key', 'Machine ID', 'Date', 'Amt', 'Status'
@@ -70,7 +38,7 @@ export const Reward = ({ navigation }) => {
                     flexWrap: 'wrap',
                 }}>
                     {
-                        datas.map((_itm, _idx) => (
+                        datas.reward.map((_itm, _idx) => (
                             <View
                                 style={{
                                     width: '50%',

@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#000', // Black background
         // No padding here, padding is on contentContainer
+        paddingTop: 24
     },
     topBackImage: {
         position: 'absolute',

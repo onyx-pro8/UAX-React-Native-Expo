@@ -11,38 +11,7 @@ import Person from '../../../../../assets/person.png';
 import { WelcomeTxt } from '../../../../../components/layout/WelcomeTxt';
 import { Nav } from '../../../../../components/layout/nav';
 
-const datas = [
-    {
-        avatar: Person,
-        name: 'Mary',
-        join: '07 May, 2025',
-        balance: '$10'
-    },
-    {
-        avatar: Person,
-        name: 'Mary',
-        join: '07 May, 2025',
-        balance: '$10'
-    },
-    {
-        avatar: Person,
-        name: 'Mary',
-        join: '07 May, 2025',
-        balance: '$10'
-    },
-    {
-        avatar: Person,
-        name: 'Mary',
-        join: '07 May, 2025',
-        balance: '$10'
-    },
-    {
-        avatar: Person,
-        name: 'Mary',
-        join: '07 May, 2025',
-        balance: '$10'
-    },
-]
+import { datas } from '../../../../../components/datas';
 
 export const Referral = ({ navigation }) => {
     return (
@@ -104,7 +73,7 @@ export const Referral = ({ navigation }) => {
                     }}
                 >
                     {
-                        datas.map((_itm, _idx) => (
+                        datas.referral.map((_itm, _idx) => (
                             <View
                                 style={{
                                     ...GlobalStyles.flexBetween,

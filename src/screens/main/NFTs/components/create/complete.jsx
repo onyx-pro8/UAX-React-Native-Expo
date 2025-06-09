@@ -10,9 +10,10 @@ import { MainBtn } from "../../../../../components/layout/mainBtn";
 
 export const Complete = ({ state, setState }) => {
     const data = filter(state);
+
     return (
         <ScrollView>
-            <View style={{paddingTop: 16}}>
+            <View style={{ paddingTop: 16 }}>
                 <IconBtn
                     icon={'keyboard-arrow-left'}
                     path={() => setState(null)}

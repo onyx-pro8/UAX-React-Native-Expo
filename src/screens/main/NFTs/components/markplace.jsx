@@ -1,49 +1,9 @@
 import React from "react";
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 
-import { Datas } from "../../../../data";
+import { datas } from "../../../../components/datas";
 
 import { GlobalStyles } from "../../../../components/styles";
-
-// const datas = {
-//     nft: [
-//         {
-//             id: 1,
-//             image: NFT1,
-//             content: 'Music'
-//         },
-//         {
-//             id: 2,
-//             image: NFT2,
-//             content: 'Flight'
-//         },
-//         {
-//             id: 3,
-//             image: NFT3,
-//             content: 'No content'
-//         },
-//     ],
-//     trending: [
-//         {
-//             id: 4,
-//             image: Trending1,
-//             art: 'Portrait',
-//             rate: 200
-//         },
-//         {
-//             id: 5,
-//             image: Trending2,
-//             art: 'Abstract',
-//             rate: 200
-//         },
-//         {
-//             id: 6,
-//             image: Trending3,
-//             art: 'Portrait',
-//             rate: 200
-//         },
-//     ],
-// }
 
 export const Markplace = ({ setState }) => {
 
@@ -68,7 +28,7 @@ export const Markplace = ({ setState }) => {
                     }}
                 >
                     {
-                        Datas.markplace.nft.map((_itm, _idx) => (
+                        datas.markplace.nft.map((_itm, _idx) => (
                             <View
                                 style={{
                                     borderRadius: 18
@@ -115,7 +75,7 @@ export const Markplace = ({ setState }) => {
                     }}
                 >
                     {
-                        Datas.markplace.trending.map((_itm, _idx) => (
+                        datas.markplace.trending.map((_itm, _idx) => (
                             <TouchableOpacity
                                 style={{
                                     borderRadius: 30,

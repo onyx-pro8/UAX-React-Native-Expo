@@ -16,20 +16,8 @@ import { WelcomeTxt } from "../../../../../components/layout/WelcomeTxt";
 import { LinearMainBox } from "../../../../../components/layout/linearMainBox";
 import { Nav } from "../../../../../components/layout/nav";
 
-const datas = [
-    {
-        percent: 0,
-    },
-    {
-        percent: 15,
-    },
-    {
-        percent: 25,
-    },
-    {
-        percent: 50,
-    },
-]
+import { datas } from "../../../../../components/datas";
+
 
 export const Invite = ({ navigation }) => {
     const [state, setState] = useState(0);
@@ -172,7 +160,7 @@ export const Invite = ({ navigation }) => {
                     </View>
                     <View>
                         {
-                            datas.map((_itm, _id) => (
+                            datas.invite.map((_itm, _id) => (
                                 _id === state ?
                                     (
                                         <View

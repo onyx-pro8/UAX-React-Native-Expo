@@ -1,56 +1,16 @@
 import React from "react";
 import { Image, ScrollView, Text, View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-
 import { GlobalStyles } from "../../../../components/styles";
 
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
 import { WelcomeTxt } from "../../../../components/layout/WelcomeTxt";
-// images import 
-import image1 from '../../../../assets/collections/1.png';
-import image2 from '../../../../assets/collections/2.png';
-import image3 from '../../../../assets/collections/3.png';
-import image4 from '../../../../assets/collections/4.png';
-import image5 from '../../../../assets/collections/5.png';
-import image6 from '../../../../assets/collections/6.png';
-
-
 import { NoData } from "../../../../components/common/noData";
 import { LinearMainBox } from "../../../../components/layout/linearMainBox";
 
-const datas = [
-    {
-        image: image1,
-        art: 1,
-        uaxn: 100
-    },
-    {
-        image: image2,
-        art: 2,
-        uaxn: 50
-    },
-    {
-        image: image3,
-        art: 3,
-        uaxn: 10
-    },
-    {
-        image: image4,
-        art: 1,
-        uaxn: 100
-    },
-    {
-        image: image5,
-        art: 2,
-        uaxn: 50
-    },
-    {
-        image: image6,
-        art: 3,
-        uaxn: 10
-    },
-]
+import { datas } from "../../../../components/datas";
+
 
 export const Collections = () => {
     return (
@@ -64,8 +24,8 @@ export const Collections = () => {
                 paddingBottom: 38
             }}>
                 {
-                    datas.length ?
-                        datas.map((_itm, _idx) => (
+                    datas.collections.length ?
+                        datas.collections.map((_itm, _idx) => (
                             <View key={_idx} style={{
                                 width: '50%',
                                 padding: 5

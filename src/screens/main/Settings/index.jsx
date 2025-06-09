@@ -12,65 +12,7 @@ import { GlobalStyles } from "../../../components/styles";
 
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
-// images 
-
-import infor from '../../../assets/settings/information.png';
-import wallet from '../../../assets/settings/wallet.png';
-import dev from '../../../assets/settings/dev.png';
-import face from '../../../assets/settings/face.png';
-import touch from '../../../assets/settings/touch.png';
-
-import invite from '../../../assets/settings/invite.png';
-import help from '../../../assets/settings/help.png';
-import about from '../../../assets/settings/about.png';
-
-const datas = [
-    {
-        title: 'General',
-        lists: [
-            {
-                icon: infor,
-                content: 'Basic Information',
-                path: 'BasicInfor'
-            },
-            {
-                icon: wallet,
-                content: 'Wallet Settings',
-                path: 'Wallet'
-            },
-            {
-                icon: dev,
-                content: 'Developer Settings',
-                path: 'Developer'
-            },
-            {
-                icon: face,
-                content: 'Face ID',
-                path: 'FaceID'
-            },
-        ]
-    },
-    {
-        title: 'More info & support',
-        lists: [
-            {
-                icon: invite,
-                content: 'Invite & Earn',
-                path: 'Invite'
-            },
-            {
-                icon: help,
-                content: 'Help & Support',
-                path: 'Help'
-            },
-            {
-                icon: about,
-                content: 'About Us',
-                path: 'AboutUs'
-            },
-        ]
-    },
-]
+import { datas } from "../../../components/datas";
 
 export const Settings = ({ navigation }) => {
     const [enable, setEnable] = useState(false);
@@ -88,7 +30,7 @@ export const Settings = ({ navigation }) => {
                 </View>
                 <ScrollView>
                     {
-                        datas.map((_itm, _idx) => (
+                        datas.settings.map((_itm, _idx) => (
                             <LinearMainBox
                                 style={{
                                     padding: 14,

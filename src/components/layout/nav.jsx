@@ -1,56 +1,9 @@
 import React from "react";
-// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Image, Text, View, TouchableOpacity } from "react-native";
 import { GlobalStyles } from "../styles";
 
 
-// image import
-import Vector from '../../assets/Vector.png';
-import VectorActive from '../../assets/Vector(1).png';
-import nfts from '../../assets/nfts.png';
-import nftsActive from '../../assets/nfts(1).png';
-import Swap from '../../assets/Swap.png';
-import SwapActive from '../../assets/Swap(1).png';
-import reward from '../../assets/reward.png';
-import rewardActive from '../../assets/reward(1).png';
-import Settings from '../../assets/Settings.png';
-import SettingsActive from '../../assets/Settings(1).png';
-
-const images = {
-    Vector,
-    VectorActive,
-    nfts,
-    nftsActive,
-    Swap,
-    SwapActive,
-    reward,
-    rewardActive,
-    Settings,
-    SettingsActive,
-}
-
-const datas = [
-    {
-        image: 'Vector',
-        path: 'Dashboard'
-    },
-    {
-        image: 'nfts',
-        path: 'NFTs'
-    },
-    {
-        image: 'Swap',
-        path: 'Swap'
-    },
-    {
-        image: 'reward',
-        path: 'Reward'
-    },
-    {
-        image: 'Settings',
-        path: 'Settings'
-    },
-]
+import { datas } from "../datas";
 
 // const Tab = createBottomTabNavigator();
 
@@ -65,7 +18,7 @@ export const Nav = ({ navigation, place }) => {
                 marginHorizontal: -16,
             }}>
             {
-                datas.map((_itm, _idx) => (
+                datas.nav.datas.map((_itm, _idx) => (
                     <View
                         key={_idx}
                     >
@@ -83,7 +36,7 @@ export const Nav = ({ navigation, place }) => {
                             }}
                         >
                             <Image
-                                source={images[_itm.image]}
+                                source={datas.nav.images[_itm.image]}
                                 alt={_itm.image}
                                 width={20}
                             />
@@ -115,7 +68,7 @@ export const Nav = ({ navigation, place }) => {
 
                             }}>
                                 <Image
-                                    source={images[_itm.image + 'Active']}
+                                    source={datas.nav.images[_itm.image + 'Active']}
                                     alt={_itm.image}
                                     width={20}
                                 />

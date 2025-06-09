@@ -57,6 +57,9 @@ export const NFTs = ({ navigation }) => {
         </>
     );
 
+    console.log(markplace);
+
+
     return (
         <Template
             children={
