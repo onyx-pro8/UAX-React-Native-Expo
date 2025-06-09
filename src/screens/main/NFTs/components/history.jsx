@@ -1,11 +1,11 @@
 import React from "react";
-import { GlobalStyles } from "../../../../components/styles";
+import { GlobalStyles } from "@components/styles";
 import { LinearGradient } from "expo-linear-gradient";
 
 import { View, Text } from "react-native";
 
-import { NoData } from "../../../../components/common/noData";
-import { LinearMainBox } from "../../../../components/layout/linearMainBox";
+import { NoData } from "@components/common/noData";
+import { LinearMainBox } from "@components/layout/linearMainBox";
 
 export const History = () => {
     return (

@@ -3,13 +3,13 @@ import { Image, ScrollView, Text, View } from "react-native";
 
 import { LinearGradient } from "expo-linear-gradient";
 
-import { IconBtn } from '../../../../../components/common/IconBtn'
-import { filter } from "./filter";
-import { GlobalStyles } from "../../../../../components/styles";
-import { MainBtn } from "../../../../../components/layout/mainBtn";
+import { IconBtn } from '@components/common/IconBtn'
+import { filter } from "@components/filter";
+import { GlobalStyles } from "@components/styles";
+import { MainBtn } from "@components/layout/mainBtn";
 
 export const Complete = ({ state, setState }) => {
-    const data = filter(state);
+    const data = filter(state, 'markplace');
 
     return (
         <ScrollView>

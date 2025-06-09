@@ -1,52 +1,55 @@
 // for Nav images
-import Vector from '../assets/Vector.png';
-import VectorActive from '../assets/Vector(1).png';
-import nfts from '../assets/nfts.png';
-import nftsActive from '../assets/nfts(1).png';
-import Swap from '../assets/Swap.png';
-import SwapActive from '../assets/Swap(1).png';
-import reward from '../assets/reward.png';
-import rewardActive from '../assets/reward(1).png';
-import Settings from '../assets/Settings.png';
-import SettingsActive from '../assets/Settings(1).png';
+import Vector from '@assets/Vector.png';
+import VectorActive from '@assets/Vector(1).png';
+import nfts from '@assets/nfts.png';
+import nftsActive from '@assets/nfts(1).png';
+import Swap from '@assets/Swap.png';
+import SwapActive from '@assets/Swap(1).png';
+import reward from '@assets/reward.png';
+import rewardActive from '@assets/reward(1).png';
+import Settings from '@assets/Settings.png';
+import SettingsActive from '@assets/Settings(1).png';
 
 // for Collections Images
 
-import image1 from '../assets/collections/1.png';
-import image2 from '../assets/collections/2.png';
-import image3 from '../assets/collections/3.png';
-import image4 from '../assets/collections/4.png';
-import image5 from '../assets/collections/5.png';
-import image6 from '../assets/collections/6.png';
+import image1 from '@assets/collections/1.png';
+import image2 from '@assets/collections/2.png';
+import image3 from '@assets/collections/3.png';
+import image4 from '@assets/collections/4.png';
+import image5 from '@assets/collections/5.png';
+import image6 from '@assets/collections/6.png';
 
 // nft images
-import NFT1 from '../assets/markplace/ntf/1.jpg';
-import NFT2 from '../assets/markplace/ntf/2.png';
-import NFT3 from '../assets/markplace/ntf/3.jpg';
+import NFT1 from '@assets/markplace/ntf/1.jpg';
+import NFT2 from '@assets/markplace/ntf/2.png';
+import NFT3 from '@assets/markplace/ntf/3.jpg';
 
 // trending images
-import Trending1 from '../assets/markplace/trending/1.jpg';
-import Trending2 from '../assets/markplace/trending/2.png';
-import Trending3 from '../assets/markplace/trending/3.jpg';
+import Trending1 from '@assets/markplace/trending/1.jpg';
+import Trending2 from '@assets/markplace/trending/2.png';
+import Trending3 from '@assets/markplace/trending/3.jpg';
 
 // for Reward images 
-import first from '../assets/bandwidth/1.png';
-import second from '../assets/bandwidth/2.png';
-import third from '../assets/bandwidth/3.png';
-import force from '../assets/bandwidth/4.png';
+import first from '@assets/bandwidth/1.png';
+import second from '@assets/bandwidth/2.png';
+import third from '@assets/bandwidth/3.png';
+import force from '@assets/bandwidth/4.png';
 
 // for settings images
-import infor from '../assets/settings/information.png';
-import wallet from '../assets/settings/wallet.png';
-import dev from '../assets/settings/dev.png';
-import face from '../assets/settings/face.png';
+import infor from '@assets/settings/information.png';
+import wallet from '@assets/settings/wallet.png';
+import dev from '@assets/settings/dev.png';
+import face from '@assets/settings/face.png';
 
-import invite from '../assets/settings/invite.png';
-import help from '../assets/settings/help.png';
-import about from '../assets/settings/about.png';
+import invite from '@assets/settings/invite.png';
+import help from '@assets/settings/help.png';
+import about from '@assets/settings/about.png';
 
 // for Referral Images
-import Person from '../assets/person.png';
+import Person from '@assets/person.png';
+
+// for TicketDetail images
+import ticket from '@assets/image.png';
 
 export const datas = {
     nav: {
@@ -230,14 +233,14 @@ export const datas = {
                 },
                 {
                     icon: help,
-                    content: 'Help & Support',
-                    path: 'Help'
+                    content: 'Support Ticket',
+                    path: 'Support'
                 },
-                {
-                    icon: about,
-                    content: 'About Us',
-                    path: 'AboutUs'
-                },
+                // {
+                //     icon: about,
+                //     content: 'About Us',
+                //     path: 'AboutUs'
+                // },
             ]
         },
     ],
@@ -311,6 +314,49 @@ export const datas = {
             icon: force,
             content: '0.00 UAXN',
             color: '#DF16FF'
+        },
+    ],
+    support: [
+        {
+            id: 1234,
+            submit: 'Can’t update the app',
+            date: 'Jun 03, 2025',
+            time: '11:20 pm',
+            status: 'Open'
+        },
+        {
+            id: 1235,
+            submit: 'How to edit my pro',
+            date: 'May 28, 2025',
+            time: '11:20 pm',
+            status: 'In progress'
+        },
+        {
+            id: 1236,
+            submit: 'Cannot open the app',
+            date: 'May 10, 2025',
+            time: '11:20 pm',
+            status: 'Solved'
+        },
+    ],
+    ticketDetail: [
+        {
+            color: ['#2C2430', '#19131D'],
+            title: 'John Doe',
+            content: 'Why can’t I update the app? It keeps reloading the same page. Please help.',
+            time: '20:00',
+            image: ticket,
+            imageColor: '#2C2430',
+            icon: false
+        },
+        {
+            color: ['#1C2F2DF7', '#1C2F2DF7'],
+            title: 'Deanna',
+            content: 'Hi, Deanna here. Have you tried turning your phone off and on again?',
+            time: '20:00',
+            image: ticket,
+            imageColor: '#304141',
+            icon: true
         },
     ]
 }

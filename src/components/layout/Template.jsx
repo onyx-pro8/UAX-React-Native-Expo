@@ -1,8 +1,8 @@
 import React from "react";
 import { View, StyleSheet, Image } from "react-native";
 
-import topBackImage from '../../assets/top-back.png';
-import bottomBackImage from '../../assets/bottom-back.png';
+import topBackImage from '@assets/top-back.png';
+import bottomBackImage from '@assets/bottom-back.png';
 
 export const Template = ({ children, style }) => {
     return (

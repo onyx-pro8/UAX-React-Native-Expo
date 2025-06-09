@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { ScrollView } from "react-native";
 
-import { Header } from '../../../components/layout/header';
-import { UserInfo } from '../../../components/layout/userInfo';
-import { Nav } from '../../../components/layout/nav';
+import { Header } from '@components/layout/header';
+import { UserInfo } from '@components/layout/userInfo';
+import { Nav } from '@components/layout/nav';
 
-import { Template } from "../../../components/layout/Template";
+import { Template } from "@components/layout/Template";
 import { ButtonList } from "./components/buttons";
 
 // elemetn 
@@ -56,9 +56,6 @@ export const NFTs = ({ navigation }) => {
             <Nav navigation={navigation} place={'NFTs'} />
         </>
     );
-
-    console.log(markplace);
-
 
     return (
         <Template

@@ -1,12 +1,12 @@
 import React from 'react';
 import { View, Text, StyleSheet, Platform, Image } from 'react-native';
 import ModalSelector from 'react-native-modal-selector';
-import { Linear } from '../../../../../components/common/linear';
-import { GlobalStyles } from '../../../../../components/styles';
+import { Linear } from '@components/common/linear';
+import { GlobalStyles } from '@components/styles';
 import { AntDesign } from '@expo/vector-icons';
 
-import uaxn from '../../../../../assets/balance/uax.png';
-import usdt from '../../../../../assets/balance/usdt.png';
+import uaxn from '@assets/balance/uax.png';
+import usdt from '@assets/balance/usdt.png';
 
 export const Select = ({ state, setState }) => {
     const data = [

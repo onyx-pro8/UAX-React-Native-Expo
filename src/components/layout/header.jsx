@@ -13,11 +13,11 @@ import Animated, {
 // Import your components and assets
 import { IconBtn } from "../common/IconBtn";
 import { GlobalStyles } from "../styles";
-import Logo from "../../assets/logo.png";
-import Light from "../../assets/light.png";
-import MenuLight from '../../assets/menu/light.png';
-import Bridge from '../../assets/menu/bridge.png';
-import Logout from '../../assets/menu/logout.png';
+import Logo from "@assets/logo.png";
+import Light from "@assets/light.png";
+import MenuLight from '@assets/menu/light.png';
+import Bridge from '@assets/menu/bridge.png';
+import Logout from '@assets/menu/logout.png';
 
 const menuItems = [
     {

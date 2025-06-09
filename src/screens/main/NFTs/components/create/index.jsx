@@ -1,15 +1,17 @@
 import React from "react";
 import { Image, ScrollView, Text, View, SafeAreaView } from "react-native";
-import { GlobalStyles } from "../../../../../components/styles";
-import { IconBtn } from "../../../../../components/common/IconBtn";
+import { GlobalStyles } from "@components/styles";
+import { IconBtn } from "@components/common/IconBtn";
 import AntDesign from '@expo/vector-icons/AntDesign';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { WelcomeTxt } from "../../../../../components/layout/WelcomeTxt";
-import { MainBtn } from "../../../../../components/layout/mainBtn";
-import { filter } from "./filter";
+import { WelcomeTxt } from "@components/layout/WelcomeTxt";
+import { MainBtn } from "@components/layout/mainBtn";
+import { filter } from "@components/filter";
+
+
 
 export const CreateNFT = ({ state, setState, setComplete }) => {
-    const data = filter(state);
+    const data = filter(state, 'markplace');
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#000', marginHorizontal: -16 }}>

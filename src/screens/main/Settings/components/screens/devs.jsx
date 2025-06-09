@@ -1,15 +1,15 @@
 import React from "react";
 import { Image, ScrollView, Text, View } from "react-native";
 
-import { GlobalStyles } from "../../../../../components/styles";
+import { GlobalStyles } from "@components/styles";
 
-import { NoData } from '../../../../../components/common/noData';
-import { Header } from "../../../../../components/layout/header";
-import { Template } from "../../../../../components/layout/Template";
-import { LinearMainBox } from "../../../../../components/layout/linearMainBox";
-import { MainBtn } from "../../../../../components/layout/mainBtn";
-import { WelcomeTxt } from "../../../../../components/layout/WelcomeTxt";
-import { Nav } from "../../../../../components/layout/nav";
+import { NoData } from '@components/common/noData';
+import { Header } from "@components/layout/header";
+import { Template } from "@components/layout/Template";
+import { LinearMainBox } from "@components/layout/linearMainBox";
+import { MainBtn } from "@components/layout/mainBtn";
+import { WelcomeTxt } from "@components/layout/WelcomeTxt";
+import { Nav } from "@components/layout/nav";
 
 const datas = [
     'Client Id', 'dAPP Name', 'Redirect URL', 'Status'

@@ -1,8 +1,8 @@
 import React from "react";
 import { Text, View } from "react-native";
 
-import { Input } from "../../../../components/common/Input";
-import { GlobalStyles } from "../../../../components/styles";
+import { Input } from "@components/common/Input";
+import { GlobalStyles } from "@components/styles";
 
 const datas = {
     name: {

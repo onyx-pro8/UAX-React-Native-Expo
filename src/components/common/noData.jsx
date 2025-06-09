@@ -2,7 +2,7 @@ import React from "react";
 import { Image, Text, View } from "react-native";
 import { GlobalStyles } from "../styles";
 
-import noData from '../../assets/collections/no data.png';
+import noData from '@assets/collections/no data.png';
 
 export const NoData = ({ type }) => {
     return (

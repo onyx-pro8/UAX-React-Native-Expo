@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { View, StyleSheet, Image } from 'react-native';
 
-import Dots from '../../assets/welcome/dots.png';
-import { GlobalStyles } from '../../components/styles';
+import Dots from '@assets/welcome/dots.png';
+import { GlobalStyles } from '@components/styles';
 
 export const Loading = ({ navigation }) => {
     useEffect(() => {

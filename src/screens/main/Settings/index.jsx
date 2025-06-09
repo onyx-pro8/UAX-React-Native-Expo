@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 
-import { Template } from "../../../components/layout/Template";
-import { Header } from "../../../components/layout/header";
+import { Template } from "@components/layout/Template";
+import { Header } from "@components/layout/header";
 
 import { Image, ScrollView, Text, TouchableOpacity, View, Switch } from "react-native";
-import { Nav } from "../../../components/layout/nav";
+import { Nav } from "@components/layout/nav";
 
-import { LinearMainBox } from '../../../components/layout/linearMainBox';
-import { WelcomeTxt } from '../../../components/layout/WelcomeTxt';
-import { GlobalStyles } from "../../../components/styles";
+import { LinearMainBox } from '@components/layout/linearMainBox';
+import { WelcomeTxt } from '@components/layout/WelcomeTxt';
+import { GlobalStyles } from "@components/styles";
 
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
-import { datas } from "../../../components/datas";
+import { datas } from "@components/datas";
 
 export const Settings = ({ navigation }) => {
     const [enable, setEnable] = useState(false);
@@ -25,9 +25,11 @@ export const Settings = ({ navigation }) => {
             paddingVertical: 0
         }}>
             <>
-                <View style={{ marginBottom: 18 }}>
-                    <Header content={'Settings'} navigation={navigation} />
-                </View>
+                <Header
+                    content={'Settings'}
+                    navigation={navigation}
+                    style={{ marginBottom: 18 }}
+                />
                 <ScrollView>
                     {
                         datas.settings.map((_itm, _idx) => (

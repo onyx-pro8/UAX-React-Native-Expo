@@ -1,50 +1,14 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Alert } from 'react-native';
-import * as ImagePicker from 'expo-image-picker';
-import * as FileSystem from 'expo-file-system';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { GlobalStyles } from '../../../../components/styles';
-import { LinearMainBox } from '../../../../components/layout/linearMainBox';
+import { GlobalStyles } from '@components/styles';
+import { LinearMainBox } from '@components/layout/linearMainBox';
 
+import { Upload } from '@components/upload';
 
 const UploadBtn = () => {
     const [selectedFile, setSelectedFile] = useState(null);
-
-    const pickFile = async () => {
-        const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
-        if (status !== 'granted') {
-            Alert.alert("Permission required", "Allow access to upload files.");
-            return;
-        }
-
-        const result = await ImagePicker.launchImageLibraryAsync({
-            mediaTypes: ImagePicker.MediaTypeOptions.Images, // Only images (adjust for videos)
-            allowsEditing: false,
-            quality: 0.7,
-        });
-
-        if (!result.canceled) {
-            const file = result.assets[0];
-            const fileInfo = await FileSystem.getInfoAsync(file.uri);
-
-            // Check file type (PNG/JPG) and size (5MB)
-            if (!file.uri.match(/\.(jpg|jpeg|png)$/i)) {
-                Alert.alert("Invalid format", "Only PNG/JPG allowed.");
-                return;
-            }
-
-            if (fileInfo.size > 5 * 1024 * 1024) {
-                Alert.alert("File too large", "Max 5MB allowed.");
-                return;
-            }
-
-            setSelectedFile({
-                name: file.uri.split('/').pop(),
-                size: (fileInfo.size / (1024 * 1024)).toFixed(2) + 'MB',
-            });
-        }
-    };
 
     return (
         <LinearMainBox
@@ -54,7 +18,7 @@ const UploadBtn = () => {
             }}
             children={<View style={styles.container}>
                 <TouchableOpacity
-                    onPress={pickFile}
+                    onPress={() => Upload(setSelectedFile)}
                     style={{ ...GlobalStyles.flex, flexDirection: 'column' }}
                 >
                     <FontAwesome

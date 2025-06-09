@@ -1,22 +1,22 @@
 import React, { useState } from "react";
 import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-import back from '../../../../../assets/Component.png';
-import star from '../../../../../assets/Medal.png';
-import box from '../../../../../assets/box.png';
-import panel from '../../../../../assets/panel.png';
+import back from '@assets/Component.png';
+import star from '@assets/Medal.png';
+import box from '@assets/box.png';
+import panel from '@assets/panel.png';
 
 import Ionicons from '@expo/vector-icons/Ionicons';
 import Feather from '@expo/vector-icons/Feather';
 
-import { Template } from "../../../../../components/layout/Template";
-import { Header } from "../../../../../components/layout/header";
-import { GlobalStyles } from "../../../../../components/styles";
-import { WelcomeTxt } from "../../../../../components/layout/WelcomeTxt";
-import { LinearMainBox } from "../../../../../components/layout/linearMainBox";
-import { Nav } from "../../../../../components/layout/nav";
+import { Template } from "@components/layout/Template";
+import { Header } from "@components/layout/header";
+import { GlobalStyles } from "@components/styles";
+import { WelcomeTxt } from "@components/layout/WelcomeTxt";
+import { LinearMainBox } from "@components/layout/linearMainBox";
+import { Nav } from "@components/layout/nav";
 
-import { datas } from "../../../../../components/datas";
+import { datas } from "@components/datas";
 
 
 export const Invite = ({ navigation }) => {

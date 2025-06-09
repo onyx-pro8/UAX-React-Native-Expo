@@ -1,13 +1,13 @@
 import React from 'react';
 import { View, StyleSheet, Image, TouchableOpacity } from 'react-native';
-import logo from '../assets/logo.png';
+import logo from '@assets/logo.png';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 // images 
-import TopRight from '../assets/welcome/top-right.png';
-import TopLeft from '../assets/welcome/top-left.png';
-import BottomRight from '../assets/welcome/bottom-right.png';
-import BottomLeft from '../assets/welcome/bottom-left.png';
+import TopRight from '@assets/welcome/top-right.png';
+import TopLeft from '@assets/welcome/top-left.png';
+import BottomRight from '@assets/welcome/bottom-right.png';
+import BottomLeft from '@assets/welcome/bottom-left.png';
 
 const images = [
     {

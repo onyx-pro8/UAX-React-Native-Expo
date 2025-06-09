@@ -1,9 +1,9 @@
 import React from "react";
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 
-import { datas } from "../../../../components/datas";
+import { datas } from "@components/datas";
 
-import { GlobalStyles } from "../../../../components/styles";
+import { GlobalStyles } from "@components/styles";
 
 export const Markplace = ({ setState }) => {
 

@@ -1,11 +1,11 @@
 import React from "react";
-import { Linear } from "../../../../../components/common/linear";
+import { Linear } from "@components/common/linear";
 import { Text, View, ScrollView } from "react-native";
 
 import Entypo from '@expo/vector-icons/Entypo';
-import { GlobalStyles } from "../../../../../components/styles";
-import { WelcomeTxt } from "../../../../../components/layout/WelcomeTxt";
-import { MainBtn } from "../../../../../components/layout/mainBtn";
+import { GlobalStyles } from "@components/styles";
+import { WelcomeTxt } from "@components/layout/WelcomeTxt";
+import { MainBtn } from "@components/layout/mainBtn";
 
 export const Transfer = ({ navigation }) => {
     return (

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { ScrollView, View } from 'react-native';
-import { MainBtn } from '../../../../components/layout/mainBtn';
+import { MainBtn } from '@components/layout/mainBtn';
 
 const datas = [
     'My Collections', 'Upload NFT', 'Marketplace', 'NFT History'

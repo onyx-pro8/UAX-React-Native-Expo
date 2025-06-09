@@ -1,20 +1,19 @@
 import React, { useState } from "react";
 
-import { Template } from "../../../../../components/layout/Template";
+import { Template } from "@components/layout/Template";
 import { Image, ScrollView, Text, View } from "react-native";
 
-import { Header } from "../../../../../components/layout/header";
-import { Nav } from "../../../../../components/layout/nav";
-import { LinearMainBox } from "../../../../../components/layout/linearMainBox";
+import { Header } from "@components/layout/header";
+import { Nav } from "@components/layout/nav";
+import { LinearMainBox } from "@components/layout/linearMainBox";
 import { Select } from "./select";
 
 import QRCode from "react-native-qrcode-svg";
-import QR from '../../../../../assets/qr.png';
-import { WelcomeTxt } from "../../../../../components/layout/WelcomeTxt";
-import { GlobalStyles } from "../../../../../components/styles";
+import { WelcomeTxt } from "@components/layout/WelcomeTxt";
+import { GlobalStyles } from "@components/styles";
 
 import Feather from '@expo/vector-icons/Feather';
-import { MainBtn } from "../../../../../components/layout/mainBtn";
+import { MainBtn } from "@components/layout/mainBtn";
 
 export const Receive = ({ navigation }) => {
     const [state, setState] = useState('network');

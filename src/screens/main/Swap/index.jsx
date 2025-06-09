@@ -1,24 +1,24 @@
 import React, { useState } from "react";
 
-import { Header } from "../../../components/layout/header";
-import { UserInfo } from "../../../components/layout/userInfo";
-import { Nav } from "../../../components/layout/nav";
+import { Header } from "@components/layout/header";
+import { UserInfo } from "@components/layout/userInfo";
+import { Nav } from "@components/layout/nav";
 import { Image, ScrollView, Text, View } from "react-native";
 
 import { LinearGradient } from "expo-linear-gradient";
 
-import { Template } from "../../../components/layout/Template";
-import { GlobalStyles } from "../../../components/styles";
-import { WelcomeTxt } from "../../../components/layout/WelcomeTxt";
+import { Template } from "@components/layout/Template";
+import { GlobalStyles } from "@components/styles";
+import { WelcomeTxt } from "@components/layout/WelcomeTxt";
 
 // import images 
-import uaxn from '../../../assets/balance/uax.png';
-import usdt from '../../../assets/balance/usdt.png';
+import uaxn from '@assets/balance/uax.png';
+import usdt from '@assets/balance/usdt.png';
 import { Select } from "./components/select";
 import { InputView } from "./components/inputView";
-import { IconBtn } from "../../../components/common/IconBtn";
-import { LinearMainBox } from "../../../components/layout/linearMainBox";
-import { MainBtn } from "../../../components/layout/mainBtn";
+import { IconBtn } from "@components/common/IconBtn";
+import { LinearMainBox } from "@components/layout/linearMainBox";
+import { MainBtn } from "@components/layout/mainBtn";
 
 const images = {
     uaxn, usdt

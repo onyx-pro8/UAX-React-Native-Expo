@@ -4,7 +4,7 @@ import { View, Image, Text } from "react-native";
 import { IconBtn } from "../common/IconBtn";
 import { GlobalStyles } from "../styles";
 
-import profile from '../../assets/profile.png';
+import profile from '@assets/profile.png';
 
 export const UserInfo = ({ navigation }) => {
     return (

@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View } from "react-native";
-import { GlobalStyles } from "../../../../components/styles";
-import { WelcomeTxt } from "../../../../components/layout/WelcomeTxt";
+import { GlobalStyles } from "@components/styles";
+import { WelcomeTxt } from "@components/layout/WelcomeTxt";
 import UploadBtn from "./uploadBtn";
 
 import { State } from "./state";

@@ -1,20 +1,20 @@
 import React from 'react';
 
-import { Template } from '../../../../components/layout/Template';
-import { Header } from '../../../../components/layout/header';
-import { UserInfo } from '../../../../components/layout/userInfo';
+import { Template } from '@components/layout/Template';
+import { Header } from '@components/layout/header';
+import { UserInfo } from '@components/layout/userInfo';
 import { Image, ScrollView, Text, View } from 'react-native';
 
-import excla from '../../../../assets/excla.png';
+import excla from '@assets/excla.png';
 
-import { GlobalStyles } from '../../../../components/styles';
-import { LinearMainBox } from '../../../../components/layout/linearMainBox';
-import { WelcomeTxt } from '../../../../components/layout/WelcomeTxt';
-import { Input } from '../../../../components/common/Input';
-import { MainBtn } from '../../../../components/layout/mainBtn';
-import { Nav } from '../../../../components/layout/nav';
+import { GlobalStyles } from '@components/styles';
+import { LinearMainBox } from '@components/layout/linearMainBox';
+import { WelcomeTxt } from '@components/layout/WelcomeTxt';
+import { Input } from '@components/common/Input';
+import { MainBtn } from '@components/layout/mainBtn';
+import { Nav } from '@components/layout/nav';
 
-import { datas } from '../../../../components/datas';
+import { datas } from '@components/datas';
 
 export const GetBand = ({ navigation }) => {
     return (

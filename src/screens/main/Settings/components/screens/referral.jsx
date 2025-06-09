@@ -1,17 +1,17 @@
 import React from 'react';
 
-import { Template } from '../../../../../components/layout/Template';
-import { Header } from '../../../../../components/layout/header';
+import { Template } from '@components/layout/Template';
+import { Header } from '@components/layout/header';
 import { Image, ScrollView, Text, View } from 'react-native';
-import { Input } from '../../../../../components/common/Input';
-import { MainBtn } from '../../../../../components/layout/mainBtn';
-import { GlobalStyles } from '../../../../../components/styles';
+import { Input } from '@components/common/Input';
+import { MainBtn } from '@components/layout/mainBtn';
+import { GlobalStyles } from '@components/styles';
 
-import Person from '../../../../../assets/person.png';
-import { WelcomeTxt } from '../../../../../components/layout/WelcomeTxt';
-import { Nav } from '../../../../../components/layout/nav';
+import Person from '@assets/person.png';
+import { WelcomeTxt } from '@components/layout/WelcomeTxt';
+import { Nav } from '@components/layout/nav';
 
-import { datas } from '../../../../../components/datas';
+import { datas } from '@components/datas';
 
 export const Referral = ({ navigation }) => {
     return (

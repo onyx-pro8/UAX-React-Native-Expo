@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, TextInput, View } from "react-native";
-import { GlobalStyles } from "../../../../components/styles";
+import { GlobalStyles } from "@components/styles";
 
 export const InputView = ({ view, setView, state, type }) => {
     const handleChange = (val) => {

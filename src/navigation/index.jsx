@@ -3,7 +3,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
 
-
 //  Home && User
 
 import { Home } from '../screens/Home';
@@ -41,7 +40,7 @@ import { TouchID } from '../screens/main/Settings/components/screens/touchID';
 import { Referral } from '../screens/main/Settings/components/screens/referral';
 
 import { Invite } from '../screens/main/Settings/components/screens/invite';
-import { Help } from '../screens/main/Settings/components/screens/help';
+import { Support } from '../screens/main/Settings/components/screens/support';
 import { AboutUs } from '../screens/main/Settings/components/screens/aboutUs';
 
 const Stack = createNativeStackNavigator();
@@ -83,7 +82,7 @@ export default function Navigator() {
                 <Stack.Screen name="FaceID" component={FaceID} />
                 <Stack.Screen name="TouchID" component={TouchID} />
                 <Stack.Screen name="Invite" component={Invite} />
-                <Stack.Screen name="Help" component={Help} />
+                <Stack.Screen name="Support" component={Support} />
                 <Stack.Screen name="AboutUs" component={AboutUs} />
                 <Stack.Screen name="Referral" component={Referral} />
 

@@ -1,19 +1,19 @@
 import React from 'react';
 
-import { Template } from '../../../components/layout/Template';
+import { Template } from '@components/layout/Template';
 import { View, Image, Text, ScrollView } from 'react-native';
 
-import { Header } from '../../../components/layout/header';
-import { UserInfo } from '../../../components/layout/userInfo';
-import Balance from '../../../assets/circle.png'
-import { GlobalStyles } from '../../../components/styles';
-import { MainBtn } from '../../../components/layout/mainBtn';
-import { Nav } from '../../../components/layout/nav';
+import { Header } from '@components/layout/header';
+import { UserInfo } from '@components/layout/userInfo';
+import Balance from '@assets/circle.png'
+import { GlobalStyles } from '@components/styles';
+import { MainBtn } from '@components/layout/mainBtn';
+import { Nav } from '@components/layout/nav';
 
-import Claim from '../../../assets/claim.png';
+import Claim from '@assets/claim.png';
 import { Transaction } from './components/transaction';
 
-import { Link } from '../../../components/layout/link';
+import { Link } from '@components/layout/link';
 
 export const Dashboard = ({ navigation }) => {
     const children = (

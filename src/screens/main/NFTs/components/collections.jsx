@@ -1,15 +1,15 @@
 import React from "react";
 import { Image, ScrollView, Text, View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import { GlobalStyles } from "../../../../components/styles";
+import { GlobalStyles } from "@components/styles";
 
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
-import { WelcomeTxt } from "../../../../components/layout/WelcomeTxt";
-import { NoData } from "../../../../components/common/noData";
-import { LinearMainBox } from "../../../../components/layout/linearMainBox";
+import { WelcomeTxt } from "@components/layout/WelcomeTxt";
+import { NoData } from "@components/common/noData";
+import { LinearMainBox } from "@components/layout/linearMainBox";
 
-import { datas } from "../../../../components/datas";
+import { datas } from "@components/datas";
 
 
 export const Collections = () => {

@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 
 import { ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
-import { LinearMainBox } from "../../../../../components/layout/linearMainBox";
-import { WelcomeTxt } from "../../../../../components/layout/WelcomeTxt";
+import { LinearMainBox } from "@components/layout/linearMainBox";
+import { WelcomeTxt } from "@components/layout/WelcomeTxt";
 
-import { Template } from "../../../../../components/layout/Template";
-import { Header } from '../../../../../components/layout/header';
-import { GlobalStyles } from "../../../../../components/styles";
-import { Input } from "../../../../../components/common/Input";
+import { Template } from "@components/layout/Template";
+import { Header } from '@components/layout/header';
+import { GlobalStyles } from "@components/styles";
+import { Input } from "@components/common/Input";
 
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
-import { Nav } from "../../../../../components/layout/nav";
+import { Nav } from "@components/layout/nav";
 
 const datas = [
     {

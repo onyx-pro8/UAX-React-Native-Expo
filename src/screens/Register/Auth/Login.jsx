@@ -2,13 +2,13 @@ import React from 'react';
 
 import { View } from 'react-native';
 
-import { Template } from '../../../components/layout/Template';
-import { IconBtn } from '../../../components/common/IconBtn';
-import { WelcomeWord } from '../../../components/layout/welcomeWord';
-import { WelcomeTxt } from '../../../components/layout/WelcomeTxt';
-import { WelcomeBtn } from '../../../components/layout/WelcomeBtn';
-import { NrInput } from '../../../components/layout/Nrinput';
-import { GlobalStyles } from '../../../components/styles';
+import { Template } from '@components/layout/Template';
+import { IconBtn } from '@components/common/IconBtn';
+import { WelcomeWord } from '@components/layout/welcomeWord';
+import { WelcomeTxt } from '@components/layout/WelcomeTxt';
+import { WelcomeBtn } from '@components/layout/WelcomeBtn';
+import { NrInput } from '@components/layout/Nrinput';
+import { GlobalStyles } from '@components/styles';
 
 export const LoginAuth = ({ navigation }) => {
     const children = (

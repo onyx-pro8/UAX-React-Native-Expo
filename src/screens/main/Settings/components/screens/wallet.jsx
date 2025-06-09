@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { ScrollView, Switch, Text, View } from "react-native";
 
-import { Template } from "../../../../../components/layout/Template";
-import { Header } from "../../../../../components/layout/header";
-import { LinearMainBox } from "../../../../../components/layout/linearMainBox";
-import { GlobalStyles } from "../../../../../components/styles";
-import { MainBtn } from "../../../../../components/layout/mainBtn";
-import { WelcomeTxt } from "../../../../../components/layout/WelcomeTxt";
-import { Nav } from "../../../../../components/layout/nav";
+import { Template } from "@components/layout/Template";
+import { Header } from "@components/layout/header";
+import { LinearMainBox } from "@components/layout/linearMainBox";
+import { GlobalStyles } from "@components/styles";
+import { MainBtn } from "@components/layout/mainBtn";
+import { WelcomeTxt } from "@components/layout/WelcomeTxt";
+import { Nav } from "@components/layout/nav";
 
 export const Wallet = ({ navigation }) => {
 

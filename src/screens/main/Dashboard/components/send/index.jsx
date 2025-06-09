@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 
-import { Template } from '../../../../../components/layout/Template';
+import { Template } from '@components/layout/Template';
 import { View, Image, Text, ScrollView, TextInput } from 'react-native';
 
-import { Header } from '../../../../../components/layout/header';
-import { Nav } from '../../../../../components/layout/nav';
+import { Header } from '@components/layout/header';
+import { Nav } from '@components/layout/nav';
 
-import Icon from '../../../../../assets/bitcoin.png';
-import { WelcomeTxt } from '../../../../../components/layout/WelcomeTxt';
-import { GlobalStyles } from '../../../../../components/styles';
-import { LinearMainBox } from '../../../../../components/layout/linearMainBox';
+import Icon from '@assets/bitcoin.png';
+import { WelcomeTxt } from '@components/layout/WelcomeTxt';
+import { GlobalStyles } from '@components/styles';
+import { LinearMainBox } from '@components/layout/linearMainBox';
 import { Select } from './select';
-import { Link } from '../../../../../components/layout/link';
+import { Link } from '@components/layout/link';
 
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
-import { MainBtn } from '../../../../../components/layout/mainBtn';
+import { MainBtn } from '@components/layout/mainBtn';
 
 export const Send = ({ navigation }) => {
     const [state, setState] = useState({

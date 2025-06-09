@@ -1,13 +1,13 @@
 import React from "react";
 
 import { View, Text, Image } from 'react-native';
-import { GlobalStyles } from "../../../../components/styles";
+import { GlobalStyles } from "@components/styles";
 import { LinearGradient } from "expo-linear-gradient";
 
-import Icon from '../../../../assets/icon.png';
+import Icon from '@assets/icon.png';
 
-import { WelcomeTxt } from "../../../../components/layout/WelcomeTxt";
-import { Linear } from "../../../../components/common/linear";
+import { WelcomeTxt } from "@components/layout/WelcomeTxt";
+import { Linear } from "@components/common/linear";
 
 export const Transaction = ({ navigation }) => {
     return (
