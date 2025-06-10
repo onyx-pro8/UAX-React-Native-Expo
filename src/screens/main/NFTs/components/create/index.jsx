@@ -51,6 +51,7 @@ export const CreateNFT = ({ state, setState, setComplete }) => {
                                 backgroundColor: 'transparent',
                                 borderColor: '#fff',
                                 borderWidth: 1,
+                                marginTop: 16
                             }}
                             icon={"keyboard-arrow-left"}
                         />
