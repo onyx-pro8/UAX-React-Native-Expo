@@ -39,6 +39,14 @@ export const Dashboard = ({ navigation }) => {
                             style={{
                                 ...GlobalStyles.GreenTxt
                             }}
+                        >$1.31</Text>
+                        <Text
+                            style={{
+                                color: '#DF16FF',
+                                fontWeight: '500',
+                                fontSize: 16,
+                                textAlign: 'center'
+                            }}
                         >100 UAXN</Text>
                     </View>
                 </View>
