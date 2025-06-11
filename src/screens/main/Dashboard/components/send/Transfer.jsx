@@ -6,6 +6,7 @@ import Entypo from '@expo/vector-icons/Entypo';
 import { GlobalStyles } from "@components/styles";
 import { WelcomeTxt } from "@components/layout/WelcomeTxt";
 import { MainBtn } from "@components/layout/mainBtn";
+import { Link } from "@components/layout/link";
 
 export const Transfer = ({ navigation }) => {
     return (
@@ -14,8 +15,9 @@ export const Transfer = ({ navigation }) => {
             children={
                 <ScrollView>
                     <View style={{
-                        paddingVertical: 135,
-                        paddingHorizontal: 16
+                        minHeight: '100%',
+                        paddingHorizontal: 16,
+                        ...GlobalStyles.flexCenter
                     }}>
                         <View style={{
                             flexDirection: 'column',
@@ -38,41 +40,38 @@ export const Transfer = ({ navigation }) => {
                                         ...GlobalStyles.minTitle,
                                         fontSize: 22
                                     }}>Transfer Success</Text>
-                            </View>
-                            <View style={{ marginTop: 32 }}>
-                                <WelcomeTxt txt={'AMOUNT'} style={{ textAlign: 'center' }} />
-                                <Text
+                                <WelcomeTxt
+                                    txt={'The recipient can check the balance.'}
                                     style={{
-                                        ...GlobalStyles.minTitle,
-                                        fontSize: 48,
+                                        fontSize: 14,
+                                        fontWeight: '400',
+                                        marginTop: 6
                                     }}
-                                >197.75</Text>
-                                <Text
-                                    style={{
-                                        ...GlobalStyles.minTitle,
-                                        fontSize: 16,
-
-                                        marginTop: 24
-                                    }}
-                                >To John Doe</Text>
+                                />
                             </View>
                         </View>
-                    </View>
-                    <View
-                        style={{
-                            paddingVertical: 32
-                        }}>
-                        <MainBtn
-                            content={{ txt: 'Go Back' }}
+                        <View
                             style={{
-                                backgroundColor: '#DA23F8',
-                                borderColor: 'transparent',
-                                borderRadius: 12
+                                position: 'absolute',
+                                bottom: 28
                             }}
-                            navigation={navigation}
-                            action={'Send'}
-                        />
+                        >
+                            <Link
+                                navigation={navigation}
+                                path={'TxHistory'}
+                                text={'View History'}
+                                style={{
+                                    textDecorationLine: 'underline'
+                                }}
+                            />
+                        </View>
                     </View>
+                    <Text
+                        style={{
+                            textDecorationLine: 'underline',
+                            position: 'absolute'
+                        }}
+                    ></Text>
                 </ScrollView>
             }
             style={{

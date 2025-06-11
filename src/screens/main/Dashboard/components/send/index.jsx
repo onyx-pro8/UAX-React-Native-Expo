@@ -6,47 +6,32 @@ import { View, Image, Text, ScrollView, TextInput } from 'react-native';
 import { Header } from '@components/layout/header';
 import { Nav } from '@components/layout/nav';
 
-import Icon from '@assets/bitcoin.png';
 import { WelcomeTxt } from '@components/layout/WelcomeTxt';
 import { GlobalStyles } from '@components/styles';
 import { LinearMainBox } from '@components/layout/linearMainBox';
-import { Select } from './select';
-import { Link } from '@components/layout/link';
 
-import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { MainBtn } from '@components/layout/mainBtn';
+import { Input } from '@components/common/Input';
+
+import AntDesign from '@expo/vector-icons/AntDesign';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+
+import { SendConfirm } from './confirm';
 
 export const Send = ({ navigation }) => {
     const [state, setState] = useState({
-        value: '100',
+        amount: '',
         address: '',
-        type: 'uaxn'
     });
 
-    const handleChange = (val) => {
-        // Allow empty, numbers, and properly formatted decimals
-        if (val === "" || /^\d*\.?\d{0,2}$/.test(val)) {
-            setState(prev => ({ ...prev, value: val }));
-        }
-    };
-
-    const filter = (Nr) => {
-        if (!Nr) return "0.00"; // Handle empty/undefined
-
-        const str = Nr.toString();
-        if (!str.includes('.')) {
-            return str.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ".00";
-        }
-
-        const [integer, decimal] = str.split('.');
-        return integer.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '.' + (decimal || '00').padEnd(2, '0');
-    }
+    const [confirm, setConfirm] = useState(false);
 
     const children = (
         <>
             <Header
-                content={'Send'}
+                content={'Send UAXN'}
                 navigation={navigation}
+                right={true}
             />
             <ScrollView style={{ margin: - 16 }}>
                 <View style={{ padding: 16 }}>
@@ -54,126 +39,198 @@ export const Send = ({ navigation }) => {
                         flexDirection: 'column',
                         alignItems: 'center'
                     }}>
-                        <Image
-                            source={Icon}
-                            alt='icon'
-                            style={{
-                                width: 48,
-                                height: 48
-                            }}
-                        />
                         <WelcomeTxt
-                            txt={'Enter Amount'}
+                            txt={'Enter the recipient\'s UAXN account address for transfer'}
                             style={{
-                                fontSize: 16,
-                                marginTop: 16
-                            }}
-                        />
-                        <TextInput
-                            value={state.value}
-                            onChangeText={handleChange}
-                            keyboardType='numeric'
-                            focusable
-                            style={{
-                                ...GlobalStyles.minTitle,
-                                fontSize: 48,
-                                width: 180,
-                                marginTop: -12
-                            }}
-                        />
-                        <WelcomeTxt
-                            txt={`$ ${filter((224.25 * Number(state.value)).toFixed(2))}`}
-                            style={{
-                                fontSize: 16,
-                                marginTop: -6
+                                fontSize: 12,
+                                color: '#FFFFFFB2',
+                                marginTop: 6,
+                                marginBottom: 36,
+                                maxWidth: 202,
+                                textAlign: 'center'
                             }}
                         />
                     </View>
                 </View>
                 <LinearMainBox
-                    children={
-                        <View style={{
-                            flexDirection: 'column',
-                            alignItems: 'center'
-                        }}>
-                            <WelcomeTxt
-                                txt={'Remaining Balance'}
-                                style={{
-                                    marginVertical: 4,
-                                    fontSize: 14
-                                }}
-                            />
-                            <WelcomeTxt
-                                txt={'$0,00 / 0 BTC'}
-                                style={{
-                                    marginVertical: 4,
-                                    fontSize: 14
-                                }}
-                            />
-                            <Select state={state} setState={setState} />
-                            <View style={{
-                                width: '100%',
-                                paddingHorizontal: 32
-                            }}>
-                                <Link
-                                    navigation={navigation}
-                                    path={'Send'}
-                                    text={'Enter Address'}
-                                    style={{
-                                        marginBottom: 6
-                                    }}
-                                />
-                                <View style={{
-                                    ...GlobalStyles.flexBetween
-                                }}>
-                                    <View>
-                                        <Text style={{
-                                            ...GlobalStyles.minTitle,
-                                            fontSize: 12,
-                                            maxWidth: 180,
-                                            lineHeight: 20,
-                                            textAlign: 'left'
-                                        }}>98A5316843664398B24BEC84
-                                            FD8F990A989DF199</Text>
-                                    </View>
-                                    <MaterialCommunityIcons name="line-scan" size={32} color="white" />
-                                </View>
-                            </View>
-                            <View style={{
-                                width: '100%',
-                                marginVertical: 52,
-                                paddingHorizontal: 32
-                            }}>
-                                <MainBtn
-                                    content={{ txt: 'Send' }}
-                                    style={{
-                                        backgroundColor: '#DA23F8',
-                                        borderColor: 'transparent',
-                                        borderRadius: 12
-                                    }}
-                                    navigation={navigation}
-                                    action={'Transfer'}
-                                />
-                            </View>
-                        </View>
-                    }
                     style={{
                         paddingVertical: 24,
                         borderRadius: 16,
+                        marginHorizontal: 16
                     }}
-                />
+                >
+                    <View style={{
+                        flexDirection: 'column',
+                        paddingVertical: 22,
+                        paddingHorizontal: 15
+                    }}>
+                        <View>
+                            <Text
+                                style={{
+                                    ...GlobalStyles.minTitle,
+                                    textAlign: 'left',
+                                    fontWeight: '500'
+                                }}
+                            >Amount to send</Text>
+                            <View>
+                                <Input
+                                    placeholder={'Enter amount'}
+                                    style={{
+                                        back: {
+                                            backgroundColor: '',
+                                            padding: 0,
+                                            borderRadius: 6
+                                        },
+                                        input: {
+                                            paddingVertical: 10,
+                                            paddingRight: 70
+                                        }
+                                    }}
+                                    value={state.amount}
+                                    onChangeText={(e) => setState(prev => ({
+                                        ...prev, amount: e
+                                    }))}
+                                />
+                                <MainBtn
+                                    content={{ txt: 'MAX' }}
+                                    style={{
+                                        position: 'absolute',
+                                        backgroundColor: '#DF16FF',
+                                        borderColor: '#DF16FF',
+                                        right: 10,
+                                        top: '50%',
+                                        transform: 'translate(0, -50%)',
+                                        paddingVertical: 6
+                                    }}
+                                />
+                            </View>
+                            <View
+                                style={{
+                                    ...GlobalStyles.flex,
+                                    paddingBottom: 26
+                                }}
+                            >
+                                <Text
+                                    style={{
+                                        fontSize: 12,
+                                        fontWeight: '400',
+                                        color: '#FFFFFFB2',
+                                        lineHeight: 36
+                                    }}
+                                >Available Balance:{'  '}
+                                    <Text
+                                        style={{
+                                            color: '#fff'
+                                        }}
+                                    > 122.50 UAXN</Text>
+                                </Text>
+                            </View>
+                        </View>
+                        <View>
+                            <Text
+                                style={{
+                                    ...GlobalStyles.minTitle,
+                                    textAlign: 'left',
+                                    fontWeight: '500'
+                                }}
+                            >To Address</Text>
+                            <View>
+                                <Input
+                                    placeholder={'Enter wallet address'}
+                                    style={{
+                                        back: {
+                                            backgroundColor: '',
+                                            padding: 0,
+                                            borderRadius: 6
+                                        },
+                                        input: {
+                                            paddingVertical: 10,
+                                            paddingRight: 70
+                                        }
+                                    }}
+                                    value={state.address}
+                                    onChangeText={(e) => setState(prev => ({
+                                        ...prev, address: e
+                                    }))}
+                                />
+                                <MaterialCommunityIcons
+                                    name="line-scan"
+                                    size={24}
+                                    color="#FFF"
+                                    style={{
+                                        position: 'absolute',
+                                        right: 10,
+                                        top: '50%',
+                                        transform: 'translate(0, -50%)',
+                                        paddingVertical: 6,
+                                    }}
+                                />
+                            </View>
+                            <View
+                                style={{
+                                    ...GlobalStyles.flex,
+                                    paddingBottom: 26
+                                }}
+                            >
+                                <Text
+                                    style={{
+                                        fontSize: 12,
+                                        fontWeight: '400',
+                                        color: '#FFFFFFB2',
+                                        lineHeight: 36
+                                    }}
+                                >Estimated Fee:{'  '}
+                                    <Text
+                                        style={{
+                                            color: '#fff'
+                                        }}
+                                    > 212 BANDWIDTH</Text>
+                                </Text>
+                                <AntDesign
+                                    name="questioncircle"
+                                    size={12}
+                                    color="#FFFFFFB2"
+                                    style={{
+                                        marginLeft: 6
+                                    }}
+                                />
+                            </View>
+                        </View>
+                        <MainBtn
+                            content={{ txt: 'Continue' }}
+                            style={{
+                                backgroundColor: '#DA23F8',
+                                borderColor: 'transparent',
+                                borderRadius: 12,
+                                borderRadius: 6
+                            }}
+                            action={() => setConfirm(prev => !prev)}
+                        />
+                    </View>
+                </LinearMainBox>
             </ScrollView>
             <Nav place={'Dashboard'} navigation={navigation} />
         </>
     );
 
     return (
-        <Template
-            children={children}
-            style={{
-                padding: 16,
-                paddingVertical: 0
-            }}
-        />
+        <>
+            <Template
+                children={children}
+                style={{
+                    padding: 16,
+                    paddingVertical: 0
+                }}
+            />
+            {
+                confirm &&
+                <SendConfirm
+                    setState={setConfirm}
+                    address={state.address}
+                    amount={state.amount}
+                    navigation={navigation}
+                />
+            }
+        </>
     )
 };

@@ -29,6 +29,7 @@ import { GetBand } from '../screens/main/Swap/components/getBand';
 import { Send } from '../screens/main/Dashboard/components/send';
 import { Receive } from '../screens/main/Dashboard/components/receive';
 import { Transfer } from '../screens/main/Dashboard/components/send/Transfer';
+import { TxHistory } from '@screens/main/Dashboard/components/send/history';
 
 // Settings
 
@@ -74,6 +75,7 @@ export default function Navigator() {
                 <Stack.Screen name="Send" component={Send} />
                 <Stack.Screen name="Receive" component={Receive} />
                 <Stack.Screen name="Transfer" component={Transfer} />
+                <Stack.Screen name="TxHistory" component={TxHistory} />
 
                 {/* settings */}
                 <Stack.Screen name="BasicInfor" component={BasicInfor} />

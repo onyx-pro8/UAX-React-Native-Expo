@@ -48,6 +48,9 @@ import about from '@assets/settings/about.png';
 // for Referral Images
 import Person from '@assets/person.png';
 
+// for Transation history
+import Txs from '@assets/txs.png';
+
 // for TicketDetail images
 import ticket from '@assets/image.png';
 
@@ -357,6 +360,44 @@ export const datas = {
             image: ticket,
             imageColor: '#304141',
             icon: true
+        },
+    ],
+    txs: [
+        {
+            icon: Txs,
+            state: true,
+            amount: 100,
+            usd: 1.21,
+            txid: '980706b09a99bfd953c5cfa6',
+            date: '10/06/2025',
+            time: '14:12:03'
+        },
+        {
+            icon: Txs,
+            state: false,
+            amount: 77.42,
+            usd: 0.12,
+            txid: '980706b09a99bfd953c5cfa6',
+            date: '10/06/2025',
+            time: '14:12:03'
+        },
+        {
+            icon: Txs,
+            state: false,
+            amount: 77.42,
+            usd: 0.12,
+            txid: '980706b09a99bfd953c5cfa6',
+            date: '10/06/2025',
+            time: '14:12:03'
+        },
+        {
+            icon: Txs,
+            state: true,
+            amount: 100.00,
+            usd: 1.21,
+            txid: '980706b09a99bfd953c5cfa6',
+            date: '10/06/2025',
+            time: '14:12:03'
         },
     ]
 }
