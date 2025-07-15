@@ -28,38 +28,36 @@ const images = [
     }
 ];
 
-export const Home = ({ navigation }) => {
-    return (
-        <View style={styles.container}>
-            <Image source={logo} style={styles.logo} />
-            <View style={styles.bottomButtonContainer}>
-                <TouchableOpacity
-                    style={styles.nextButton}
-                    onPress={() => navigation.navigate('Loading')}
-                >
-                    {
-                        images.map((_itm, _idx) => (
-                            <Image
-                                source={_itm.image}
-                                key={_idx}
-                                alt={_itm.content}
-                                style={{
-                                    position: 'absolute',
-                                    ...styles[_itm.content]
-                                }}
-                            />
-                        ))
-                    }
-                    <MaterialIcons
-                        name="keyboard-arrow-right"
-                        size={42}
-                        color="white"
-                    />
-                </TouchableOpacity>
-            </View>
+export const Home = ({ navigation }) =>
+    <View style={styles.container}>
+        <Image source={logo} style={styles.logo} />
+        <View style={styles.bottomButtonContainer}>
+            <TouchableOpacity
+                style={styles.nextButton}
+                onPress={() => navigation.navigate('Loading')}
+            >
+                {
+                    images.map((_itm, _idx) => (
+                        <Image
+                            source={_itm.image}
+                            key={_idx}
+                            alt={_itm.content}
+                            style={{
+                                position: 'absolute',
+                                ...styles[_itm.content]
+                            }}
+                        />
+                    ))
+                }
+                <MaterialIcons
+                    name="keyboard-arrow-right"
+                    size={42}
+                    color="white"
+                />
+            </TouchableOpacity>
         </View>
-    );
-};
+    </View>
+
 
 const styles = StyleSheet.create({
     container: {
