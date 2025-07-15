@@ -16,6 +16,33 @@ const DECORATIVE_IMAGES = [
     { image: BottomRight, position: 'BottomRight' },
 ];
 
+export const Home = ({ navigation }) =>
+    <View style={styles.container}>
+        <Image source={logo} style={styles.logo} />
+        <View style={styles.bottomButtonContainer}>
+            <TouchableOpacity
+                style={styles.nextButton}
+                onPress={() => navigation.navigate('Loading')}
+            >
+                {
+                    images.map((_itm, _idx) => (
+                        <Image
+                            source={_itm.image}
+                            key={_idx}
+                            alt={_itm.content}
+                            style={{
+                                position: 'absolute',
+                                ...styles[_itm.content]
+                            }}
+                        />
+                    ))
+                }
+                <MaterialIcons
+                    name="keyboard-arrow-right"
+                    size={42}
+                    color="white"
+                />
+            </TouchableOpacity>
 const NextButton = ({ onPress }) => (
     <TouchableOpacity
         style={styles.nextButton}
@@ -51,8 +78,8 @@ export const Home = ({ navigation }) => {
                 <NextButton onPress={handleNextPress} />
             </View>
         </View>
-    );
-};
+    </View>
+
 
 const styles = StyleSheet.create({
     container: {

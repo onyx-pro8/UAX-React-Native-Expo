@@ -9,37 +9,34 @@ import { Link } from '@components/layout/link';
 import { WelcomeBtn } from '@components/layout/WelcomeBtn';
 import { GlobalStyles } from '@components/styles';
 
-export const Login = ({ navigation }) => {
-    return (
-        <Template>
-            <IconBtn navigation={navigation} path="Home" icon={"keyboard-arrow-left"} />
-            <WelcomeWord first="Welcome" second="Back!" />
+export const Login = ({ navigation }) =>
+    <Template>
+        <IconBtn navigation={navigation} path="Home" icon={"keyboard-arrow-left"} />
+        <WelcomeWord first="Welcome" second="Back!" />
 
-            <Input placeholder="Enter email" icons={{ front: 'email' }} type="text" />
-            <Input placeholder="Enter password" icons={{ front: 'lock' }} type="password" />
+        <Input placeholder="Enter email" icons={{ front: 'email' }} type="text" />
+        <Input placeholder="Enter password" icons={{ front: 'lock' }} type="password" />
 
-            <View style={styles.forgotLink}>
-                <Link
-                    navigation={navigation}
-                    path="Forgot"
-                    text="Forgot Password?"
-                />
-            </View>
+        <View style={styles.forgotLink}>
+            <Link
+                navigation={navigation}
+                path="Forgot"
+                text="Forgot Password?"
+            />
+        </View>
 
-            <WelcomeBtn content="login" action="LoginAuth" navigation={navigation} />
+        <WelcomeBtn content="login" action="LoginAuth" navigation={navigation} />
 
-            <View style={[GlobalStyles.flexCenter, styles.signupContainer]}>
-                <Text style={styles.signupText}>Don’t have an account?</Text>
-                <Link
-                    navigation={navigation}
-                    path="Signup"
-                    text=" Signup"
-                    style={styles.signupLink}
-                />
-            </View>
-        </Template>
-    );
-};
+        <View style={[GlobalStyles.flexCenter, styles.signupContainer]}>
+            <Text style={styles.signupText}>Don’t have an account?</Text>
+            <Link
+                navigation={navigation}
+                path="Signup"
+                text=" Signup"
+                style={styles.signupLink}
+            />
+        </View>
+    </Template>
 
 const styles = StyleSheet.create({
     forgotLink: {
